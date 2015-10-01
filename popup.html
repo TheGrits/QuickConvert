@@ -4,9 +4,9 @@
       * {
         margin: 0;
         padding: 0;
+        font-family: "Tahoma";
       }
       body {
-        font-family: "Tahoma";
         height: 300px;
         width: 300px;
         background-color: #FFFFFF;
@@ -16,21 +16,33 @@
         height: 50px;
         width: 300px;
         background-color: #666666;
-        font-size: 300%;
+        font-size: 200%;
         color: #FFFFFF;
       }
+      input[type="submit"] {
+        height: 30px;
+        width: 300px;
+        background-color: #C0C0C0;
+        color: #FFFFFF;
+        border: none;
+      }
+      input[type="submit"]:hover{
+        background-color: #00E600;
+      }
+      p {
+        font-size: 150%;
+      }
     </style>
-    <script src="popup.js"></script>
   </head>
   <body>
+    <script src="popup.js"></script>
     <div>
-    <p>QuickConvert</p>
+    <p id="p0">QuickConvert</p>
     </div>
     <br>
-    <input name="input_number" type="number" placeholder="Number to convert">
+    <input id ="inputnumber" type="number" name="inputnumber" placeholder="Number to convert">
     <br>
-    <br>
-    <select name="unit_1">
+    <select id="unit_1">
       <option value="mm">Millimeters</option>
       <option value="cm">Centimeters</option>
       <option value="dim">Decimeters</option>
@@ -43,11 +55,11 @@
       <option value="yds">Yards</option>
       <option value="mi">Miles</option>
     </select>
-    
     <br>
-    <p>to</p>
     <br>
-    <select name="unit_2">
+    <p id="p1">to</p>
+    <br>
+    <select id="unit_2">
       <option value="mm">Millimeters</option>
       <option value="cm">Centimeters</option>
       <option value="dim">Decimeters</option>
@@ -60,5 +72,11 @@
       <option value="yds">Yards</option>
       <option value="mi">Miles</option>
     </select>
+    <br>
+    <br>
+    <input id="convert-submit" type="submit" value="Submit">
+    <br>
+    <br>
+    <p id="p2"></p>
   </body>
 </html>
