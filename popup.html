@@ -22,15 +22,27 @@
       input[type="submit"] {
         height: 30px;
         width: 300px;
-        background-color: #C0C0C0;
-        color: #FFFFFF;
         border: none;
+        color: #FFFFFF;
+        -webkit-animation-name: example2;
+        -webkit-animation-duration: 0.5s;
+        background-color: #C0C0C0;
       }
       input[type="submit"]:hover{
+        -webkit-animation-name: example;
+        -webkit-animation-duration: 0.5s;
         background-color: #00E600;
       }
       p {
         font-size: 150%;
+      }
+      @-webkit-keyframes example {
+        from {background-color: #C0C0C0;}
+        to {background-color: #00E600;}
+      }
+      @-webkit-keyframes example2 {
+        from {background-color: #00E600;}
+        to {background-color: #C0C0C0;}
       }
     </style>
   </head>
@@ -47,7 +59,7 @@
       <option value="cm">Centimeters</option>
       <option value="dim">Decimeters</option>
       <option value="m">Meters</option>
-      <option value="dam">Dacameters</option>
+      <option value="dem">Decameters</option>
       <option value="hm">Hectometers</option>
       <option value="km">Kilometers</option>
       <option value="in">Inches</option>
@@ -64,7 +76,7 @@
       <option value="cm">Centimeters</option>
       <option value="dim">Decimeters</option>
       <option value="m">Meters</option>
-      <option value="dam">Dacameters</option>
+      <option value="dem">Decameters</option>
       <option value="hm">Hectometers</option>
       <option value="km">Kilometers</option>
       <option value="in">Inches</option>
